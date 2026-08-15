@@ -1,4 +1,4 @@
 Contact: mailto:security@tavden.com
-Expires: 2027-08-01T00:00:00Z
+Expires: 2027-08-15T00:00:00Z
 Preferred-Languages: en
 Canonical: https://tavden.com/.well-known/security.txt

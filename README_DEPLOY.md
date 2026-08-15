@@ -1,14 +1,22 @@
-# Tavden Website — Deployment
+# Deploy Tavden Website
 
-This site is deliberately static: HTML + CSS + SVG/PNG assets, with no framework, package manager, tracking script or external font dependency.
+The folder is a dependency-free static site designed for the `tavden.github.io` repository and `tavden.com`.
 
-## Recommended deployment pattern
-1. Create a public or private website repository under the Tavden GitHub organisation.
-2. Commit the contents of this `website/` directory at repository root.
-3. Deploy with any static host (Cloudflare Pages, GitHub Pages, Netlify, etc.).
-4. Set the custom domain to `tavden.com` and redirect `www` to the apex domain.
-5. Keep HTTPS forced.
-6. Verify `/robots.txt`, `/sitemap.xml`, social preview image and favicon after DNS propagation.
+## Replace current site
+From the repository root, replace the old site files with the contents of this `website` directory, then:
 
-## Before going live
-Change no brand copy unless you have a reason. The site is intentionally restrained: no stock imagery, no fake customer logos, no unsupported claims, no trendy animation layer and no dependency that can quietly disappear.
+```bash
+git add -A
+git commit -m "Refresh Tavden website to locked 2026 brand standard"
+git push
+```
+
+GitHub Pages should remain configured to deploy from `main` / root. `CNAME` keeps the custom domain declaration in the repository.
+
+## Verify after deploy
+- `https://tavden.com` loads over HTTPS.
+- Mobile layout is clean.
+- `https://tavden.com/assets/og-tavden-1200x630.png` loads.
+- `https://tavden.com/.well-known/security.txt` loads.
+- GitHub and social links work.
+- Field Suite wording remains **in development / packaging for M5Launcher** until the release is actually live.
