@@ -1,22 +1,15 @@
-# Deploy Tavden Website
+# Tavden Website - Release-current deployment
 
-The folder is a dependency-free static site designed for the `tavden.github.io` repository and `tavden.com`.
+This website matches the Tavden 2026 master brand system and the public Field Suite v1.0.0 release state.
 
-## Replace current site
-From the repository root, replace the old site files with the contents of this `website` directory, then:
+## Public product status
+- Field Suite v1.0.0 is **available now from GitHub**.
+- Validated platform: **M5Stack CardPuter ADV**.
+- Firmware is **M5Launcher-compatible**.
+- Do not claim direct M5Launcher catalogue availability until separately confirmed.
 
-```bash
-git add -A
-git commit -m "Refresh Tavden website to locked 2026 brand standard"
-git push
-```
+## Deploy to the GitHub Pages repository
+Copy the contents of this directory into `tavden/tavden.github.io`, preserving `.git/`, then commit and push `main`.
 
-GitHub Pages should remain configured to deploy from `main` / root. `CNAME` keeps the custom domain declaration in the repository.
-
-## Verify after deploy
-- `https://tavden.com` loads over HTTPS.
-- Mobile layout is clean.
-- `https://tavden.com/assets/og-tavden-1200x630.png` loads.
-- `https://tavden.com/.well-known/security.txt` loads.
-- GitHub and social links work.
-- Field Suite wording remains **in development / packaging for M5Launcher** until the release is actually live.
+Recommended commit message:
+`Update Tavden site for Field Suite v1.0.0 public release`
